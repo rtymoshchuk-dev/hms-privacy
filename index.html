@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HMS — Privacy Policy / Політика конфіденційності</title>
+  <meta name="description" content="HMS — HoReCa Management System for iPhone. Local-only by default; optional opt-in network mode in pilot." />
+  <style>
+    :root {
+      --bg: #F5EFE6;
+      --text: #1F1814;
+      --muted: #6B5847;
+      --accent: #A87C4F;
+      --rule: #E5DBC9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1F1814;
+        --text: #F5EFE6;
+        --muted: #B8A992;
+        --accent: #C49A6C;
+        --rule: #3A2E26;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+    .brand {
+      font-family: "Didot", "Bodoni 72", Georgia, serif;
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -1px;
+      line-height: 1;
+      margin: 0 0 8px;
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 48px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .lang-switch {
+      display: flex;
+      gap: 4px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 32px;
+    }
+    .lang-switch button {
+      background: none;
+      border: none;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      font-family: inherit;
+    }
+    .lang-switch button.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      letter-spacing: -0.3px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 36px 0 12px;
+      letter-spacing: -0.2px;
+    }
+    p, li {
+      font-size: 16px;
+      margin: 0 0 14px;
+    }
+    ul {
+      padding-left: 22px;
+      margin: 0 0 14px;
+    }
+    li { margin-bottom: 6px; }
+    strong { color: var(--text); font-weight: 600; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.92em;
+      background: color-mix(in srgb, var(--accent) 10%, transparent);
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+    }
+    a:hover { border-bottom-color: var(--accent); }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+    .lang { display: none; }
+    .lang.active { display: block; }
+    .callout {
+      background: color-mix(in srgb, var(--accent) 8%, transparent);
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      margin: 24px 0;
+      border-radius: 4px;
+    }
+    .callout p { margin: 0; }
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">H</div>
+    <div class="tagline">HMS — HoReCa Management System</div>
+
+    <div class="lang-switch" role="tablist">
+      <button class="active" data-lang="uk" role="tab">Українська</button>
+      <button data-lang="en" role="tab">English</button>
+    </div>
+
+    <!-- ========== UKRAINIAN ========== -->
+    <section class="lang active" id="lang-uk">
+      <h1>Політика конфіденційності</h1>
+      <p class="meta">Дата набрання чинності: 30 травня 2026 р.</p>
+
+      <div class="callout">
+        <p><strong>Коротко:</strong> HMS зберігає всі дані <strong>лише на вашому iPhone</strong>. За замовчуванням немає серверів, передачі даних третім особам, реклами, аналітики чи трекерів. Опційний мережевий режим (Pilot, Phase 6) — за окремою згодою користувача, описаний нижче.</p>
+      </div>
+
+      <h2>1. Хто ми</h2>
+      <p>
+        Розробник застосунку: <strong>ФОП Тимощук Роман</strong>, Львів, Україна.<br>
+        Контакт: <a href="mailto:rtymoshchuk@gmail.com">rtymoshchuk@gmail.com</a>
+      </p>
+
+      <h2>2. Які дані обробляються</h2>
+      <p>HMS — це інструмент для управління HoReCa-бізнесом (кафе, ресторани, точки сервісу). Усі дані вводить власник застосунку самостійно:</p>
+      <ul>
+        <li>Імена, прізвища та PIN-коди працівників (PIN зберігається у вигляді криптографічного хешу SHA-256 у Apple Keychain)</li>
+        <li>Контактні дані працівників: номер мобільного телефону, Telegram-нікнейм — для швидкого зв'язку власника зі своїми працівниками</li>
+        <li>Інформація про точки (назви, адреси)</li>
+        <li>Дані продажів, складу, технологічних карт</li>
+        <li>Графіки змін, нарахування зарплат</li>
+      </ul>
+      <p>Застосунок <strong>не збирає</strong>: геолокацію, контакти телефонної книги iOS, фото, дані пристрою, ідентифікатори реклами, поведінкову аналітику.</p>
+      <p>Контактні дані працівників (телефон, Telegram) використовуються виключно для здійснення дзвінка/відкриття чату через стандартні iOS-механізми (URL <code>tel:</code> і <code>https://t.me/</code>) і <strong>не передаються</strong> на жоден сервер.</p>
+
+      <h2>3. Де зберігаються дані</h2>
+      <p>Усі дані зберігаються <strong>виключно локально</strong> на вашому пристрої iOS, у базі SwiftData. Файли захищені стандартним шифруванням файлової системи iOS (Data Protection). PIN-коди та токени — в iOS Keychain.</p>
+      <p>За замовчуванням HMS <strong>не має</strong> хмарного бекенду, не використовує iCloud, не синхронізує дані між пристроями.</p>
+
+      <h2>4. Передача третім особам</h2>
+      <p>Ми <strong>не передаємо</strong> ваші дані нікому: ні рекламним мережам, ні аналітичним сервісам, ні стороннім бібліотекам. У застосунку немає SDK третіх сторін, які б могли отримати доступ до даних.</p>
+
+      <h2>5. Дозволи системи iOS</h2>
+      <ul>
+        <li><strong>Сповіщення</strong> — для нагадування коли робочий таймер завершиться (7, 10 або 15 хвилин). Можна вимкнути в Налаштуваннях iOS.</li>
+        <li><strong>Face ID / Touch ID</strong> — для швидкого входу адміністратора. Біометричні дані залишаються на пристрої та не передаються застосунку (це гарантує iOS).</li>
+      </ul>
+
+      <h2>6. Опційний мережевий режим (Phase 6 — pilot)</h2>
+      <p>У HMS є експериментальна функція <strong>«Робота в команді»</strong> (мережевий режим) для пілот-користувачів. За замовчуванням вона <strong>вимкнена</strong> — треба явно увімкнути на стартовому екрані або в Settings.</p>
+      <p>Якщо ви свідомо вмикаєте цей режим:</p>
+      <ul>
+        <li>Застосунок підключається до сервера, що його тримає розробник (на момент написання — <code>174.138.39.75</code>, DigitalOcean, FRA1).</li>
+        <li>Для входу використовується <strong>Sign In with Apple</strong>. Apple повертає лише ваш стабільний Apple-ідентифікатор і (опційно — на ваш вибір) email. Пароль Apple ID нам не передається.</li>
+        <li>Бізнес-дані вашого workspace (точки, працівники, продукти, продажі, зміни тощо) синхронізуються з сервером — щоб кілька пристроїв вашої команди бачили однакові дані.</li>
+        <li>Сервер не передає ваші дані третім особам, не використовує їх для реклами, не продає.</li>
+      </ul>
+      <p>Якщо ви <strong>не вмикаєте</strong> мережевий режим — нічого з вищеописаного не відбувається. HMS працює виключно локально, як описано у пунктах 2-5.</p>
+      <p>Щоб <strong>повернутися</strong> в локальний режим: Settings → «Робота в команді» → вимкнути + force-quit застосунку. Локальні дані лишаються незмінними. Дані, що були синхронізовані на сервер, лишаються там до явного запиту на видалення (див. п. 7).</p>
+
+      <h2>7. Ваші права</h2>
+      <p>Оскільки за замовчуванням дані лише на вашому пристрої, ви маєте над ними повний контроль:</p>
+      <ul>
+        <li><strong>Видалити всі локальні дані</strong> — Settings → Безпека → «Видалити мережу» (повертає застосунок до стану свіжої установки).</li>
+        <li><strong>Видалити застосунок</strong> — звичайним способом iOS; усі дані видаляються разом із застосунком, включно з PIN у Keychain.</li>
+        <li><strong>Видалити серверні дані</strong> (якщо користувалися мережевим режимом) — напишіть на <a href="mailto:rtymoshchuk@gmail.com">rtymoshchuk@gmail.com</a>, ми видалимо ваш workspace із сервера. Реалізація self-service-кнопки видалення — у roadmap.</li>
+        <li><strong>Експорт даних</strong> — наразі не реалізовано; на запит можемо допомогти витягнути базу з резервної копії пристрою.</li>
+      </ul>
+
+      <h2>8. Діти</h2>
+      <p>HMS — професійний бізнес-інструмент для дорослих власників і працівників HoReCa-закладів. Застосунок не зорієнтований на дітей і не збирає дані про дітей.</p>
+
+      <h2>9. Юрисдикція</h2>
+      <p>Розробник зареєстрований в Україні. Ми поважаємо принципи GDPR (для користувачів з ЄС) і CCPA (для користувачів з Каліфорнії). Оскільки HMS за замовчуванням не передає дані з пристрою, більшість зобов'язань цих регуляцій застосовуються тривіально — ваші дані вже у вас на iPhone і повністю під вашим контролем.</p>
+
+      <h2>10. Зміни в політиці</h2>
+      <p>У разі суттєвих змін ми оновимо цю сторінку і змінимо дату набрання чинності вгорі. Якщо зміни значущі (наприклад, мережевий режим виходить з пілоту і стає основним), користувачам застосунку буде показано повідомлення через release notes у App Store або всередині застосунку.</p>
+
+      <h2>11. Зворотний звʼязок</h2>
+      <p>Питання, скарги, запити на видалення даних: <a href="mailto:rtymoshchuk@gmail.com">rtymoshchuk@gmail.com</a>. Відповідаємо протягом 30 днів згідно з GDPR.</p>
+    </section>
+
+    <!-- ========== ENGLISH ========== -->
+    <section class="lang" id="lang-en">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective date: May 30, 2026</p>
+
+      <div class="callout">
+        <p><strong>In short:</strong> HMS stores all data <strong>only on your iPhone</strong>. By default, there are no servers, no data sharing with third parties, no ads, no analytics, no trackers. The optional Network Mode (Pilot, Phase 6) is opt-in and is described below.</p>
+      </div>
+
+      <h2>1. Who we are</h2>
+      <p>
+        App developer: <strong>FOP Tymoshchuk Roman</strong> (sole proprietor), Lviv, Ukraine.<br>
+        Contact: <a href="mailto:rtymoshchuk@gmail.com">rtymoshchuk@gmail.com</a>
+      </p>
+
+      <h2>2. What data is processed</h2>
+      <p>HMS is a tool for managing a HoReCa business (cafés, restaurants, service venues). All data is entered by the app owner:</p>
+      <ul>
+        <li>Employee first names, last names, and PIN codes (PINs are stored as SHA-256 cryptographic hashes in Apple Keychain)</li>
+        <li>Employee contact data: mobile phone number, Telegram handle — used by the business owner to quickly reach their staff</li>
+        <li>Business location information (names, addresses)</li>
+        <li>Sales, inventory, and technology card data</li>
+        <li>Shift schedules and salary records</li>
+      </ul>
+      <p>The app <strong>does not collect</strong>: location, iOS phone book contacts, photos, device identifiers, advertising IDs, or behavioral analytics.</p>
+      <p>Employee contact data (phone, Telegram) is used solely to initiate a call or open a chat via standard iOS URL handlers (<code>tel:</code> and <code>https://t.me/</code>) and is <strong>never sent</strong> to any server.</p>
+
+      <h2>3. Where data is stored</h2>
+      <p>All data is stored <strong>exclusively on your iOS device</strong>, in a local SwiftData database. Files are protected by iOS standard file system encryption (Data Protection). PINs and tokens are stored in the iOS Keychain.</p>
+      <p>By default, HMS <strong>has no</strong> cloud backend, does not use iCloud, and does not sync data between devices.</p>
+
+      <h2>4. Sharing with third parties</h2>
+      <p>We <strong>do not share</strong> your data with anyone: no ad networks, analytics services, or third-party libraries. The app contains no third-party SDKs that could access your data.</p>
+
+      <h2>5. iOS Permissions</h2>
+      <ul>
+        <li><strong>Notifications</strong> — to remind you when a service timer expires (7, 10, or 15 minutes). Can be disabled in iOS Settings.</li>
+        <li><strong>Face ID / Touch ID</strong> — for fast admin sign-in. Biometric data stays on your device and is never accessible to the app (iOS guarantees this).</li>
+      </ul>
+
+      <h2>6. Optional Network Mode (Phase 6 — pilot)</h2>
+      <p>HMS has an experimental <strong>"Team Work"</strong> feature (Network Mode) for pilot users. It is <strong>off by default</strong> — you must explicitly enable it on the start screen or in Settings.</p>
+      <p>If you deliberately enable this mode:</p>
+      <ul>
+        <li>The app connects to a server maintained by the developer (at the time of writing — <code>174.138.39.75</code>, DigitalOcean, FRA1).</li>
+        <li>Sign-in uses <strong>Sign In with Apple</strong>. Apple returns only your stable Apple identifier and (optionally — at your choice) your email. Your Apple ID password is never sent to us.</li>
+        <li>Your workspace business data (points, employees, products, sales, shifts, etc.) is synced with the server so that multiple devices in your team see the same data.</li>
+        <li>The server does not share your data with third parties, does not use it for advertising, does not sell it.</li>
+      </ul>
+      <p>If you <strong>don't enable</strong> Network Mode — none of the above happens. HMS works strictly locally as described in sections 2-5.</p>
+      <p>To return to local mode: Settings → "Робота в команді" / "Team Work" → toggle off + force-quit the app. Local data is unchanged. Data already synced to the server remains there until an explicit deletion request (see section 7).</p>
+
+      <h2>7. Your rights</h2>
+      <p>Since data is on your device by default, you have full control:</p>
+      <ul>
+        <li><strong>Delete all local data</strong> — Settings → Security → "Видалити мережу" (resets the app to a fresh-install state).</li>
+        <li><strong>Uninstall the app</strong> — standard iOS removal; all data is deleted with the app, including PINs in Keychain.</li>
+        <li><strong>Delete server-side data</strong> (if you used Network Mode) — email <a href="mailto:rtymoshchuk@gmail.com">rtymoshchuk@gmail.com</a> and we will delete your workspace from the server. A self-service deletion button is on our roadmap.</li>
+        <li><strong>Export data</strong> — not currently implemented; on request we can help extract the database from your device backup.</li>
+      </ul>
+
+      <h2>8. Children</h2>
+      <p>HMS is a professional business tool for adult HoReCa venue owners and staff. It is not directed at children and does not collect data from children.</p>
+
+      <h2>9. Jurisdiction</h2>
+      <p>The developer is registered in Ukraine. We respect the principles of GDPR (for EU users) and CCPA (for California users). Since HMS does not transmit data from the device by default, most obligations of these regulations apply trivially — your data is already on your iPhone and fully under your control.</p>
+
+      <h2>10. Policy changes</h2>
+      <p>If we make material changes, we will update this page and revise the effective date at the top. If a change is significant (for example, Network Mode leaves pilot and becomes the default), app users will see a notification via release notes in the App Store or inside the app.</p>
+
+      <h2>11. Contact</h2>
+      <p>Questions, complaints, data deletion requests: <a href="mailto:rtymoshchuk@gmail.com">rtymoshchuk@gmail.com</a>. We respond within 30 days as required by GDPR.</p>
+    </section>
+
+    <footer>
+      © 2026 FOP Tymoshchuk Roman · Lviv, Ukraine · HMS v1.0
+    </footer>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.lang-switch button');
+    const langs = document.querySelectorAll('.lang');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        langs.forEach(l => l.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('lang-' + btn.dataset.lang).classList.add('active');
+      });
+    });
+
+    // Auto-select EN if browser is English
+    if (navigator.language && navigator.language.startsWith('en')) {
+      document.querySelector('button[data-lang="en"]').click();
+    }
+  </script>
+</body>
+</html>
