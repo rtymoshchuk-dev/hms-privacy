@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HMS — Privacy Policy / Політика конфіденційності</title>
-  <meta name="description" content="HMS — HoReCa Management System for iPhone. Local-only by default; optional opt-in network mode in pilot." />
+  <title>HMS — Політика конфіденційності</title>
+  <meta name="description" content="Політика конфіденційності HMS 2.0 — застосунку для керування HoReCa-бізнесом (iOS і Android)." />
   <style>
     :root {
       --bg: #F5EFE6;
@@ -12,6 +12,7 @@
       --muted: #6B5847;
       --accent: #A87C4F;
       --rule: #E5DBC9;
+      --todo: #E0A100;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -20,6 +21,7 @@
         --muted: #B8A992;
         --accent: #C49A6C;
         --rule: #3A2E26;
+        --todo: #E0A100;
       }
     }
     * { box-sizing: border-box; }
@@ -53,25 +55,23 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
     }
-    .lang-switch {
+    .page-nav {
       display: flex;
+      flex-wrap: wrap;
       gap: 4px;
       border-bottom: 1px solid var(--rule);
       margin-bottom: 32px;
     }
-    .lang-switch button {
-      background: none;
-      border: none;
+    .page-nav a {
       padding: 12px 20px;
       font-size: 14px;
       font-weight: 600;
       color: var(--muted);
-      cursor: pointer;
+      border: none;
       border-bottom: 2px solid transparent;
       margin-bottom: -1px;
-      font-family: inherit;
     }
-    .lang-switch button.active {
+    .page-nav a[aria-current="page"] {
       color: var(--accent);
       border-bottom-color: var(--accent);
     }
@@ -87,23 +87,21 @@
       margin: 36px 0 12px;
       letter-spacing: -0.2px;
     }
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 24px 0 8px;
+    }
     p, li {
       font-size: 16px;
       margin: 0 0 14px;
     }
-    ul {
+    ul, ol {
       padding-left: 22px;
       margin: 0 0 14px;
     }
     li { margin-bottom: 6px; }
     strong { color: var(--text); font-weight: 600; }
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.92em;
-      background: color-mix(in srgb, var(--accent) 10%, transparent);
-      padding: 1px 6px;
-      border-radius: 3px;
-    }
     a {
       color: var(--accent);
       text-decoration: none;
@@ -115,8 +113,6 @@
       font-size: 14px;
       margin-bottom: 32px;
     }
-    .lang { display: none; }
-    .lang.active { display: block; }
     .callout {
       background: color-mix(in srgb, var(--accent) 8%, transparent);
       border-left: 3px solid var(--accent);
@@ -125,6 +121,12 @@
       border-radius: 4px;
     }
     .callout p { margin: 0; }
+    .todo {
+      background: color-mix(in srgb, var(--todo) 22%, transparent);
+      border-radius: 3px;
+      padding: 0 4px;
+      font-weight: 600;
+    }
     footer {
       margin-top: 64px;
       padding-top: 24px;
@@ -139,180 +141,174 @@
     <div class="brand">H</div>
     <div class="tagline">HMS — HoReCa Management System</div>
 
-    <div class="lang-switch" role="tablist">
-      <button class="active" data-lang="uk" role="tab">Українська</button>
-      <button data-lang="en" role="tab">English</button>
-    </div>
+    <nav class="page-nav" aria-label="Сторінки">
+      <a href="index.html" aria-current="page">Політика конфіденційності</a>
+      <a href="delete-account.html">Видалення акаунта</a>
+    </nav>
 
-    <!-- ========== UKRAINIAN ========== -->
-    <section class="lang active" id="lang-uk">
+    <main>
       <h1>Політика конфіденційності</h1>
-      <p class="meta">Дата набрання чинності: 16 червня 2026 р.</p>
+      <p class="meta">Редакція для HMS 2.0 (iOS і Android). Дата набрання чинності: <span class="todo">[УТОЧНИТИ: дата виходу HMS 2.0]</span></p>
 
       <div class="callout">
-        <p><strong>Коротко:</strong> HMS зберігає ваші бізнес-дані локально на iPhone, а в опційному мережевому режимі — синхронізує з нашим сервером. Немає реклами, поведінкової аналітики, трекерів чи продажу даних. Єдиний сторонній сервіс — <strong>Sentry</strong> для діагностики збоїв (п. 4). Мережевий режим описаний нижче.</p>
+        <p><strong>Коротко:</strong> HMS — робочий застосунок для закладів HoReCa. Дані бізнесу й команди зберігаються на сервері HMS у дата-центрі DigitalOcean в Амстердамі (Нідерланди). Вхід — за номером телефону і 4-значним PIN. У застосунку немає реклами, аналітики, трекерів і сервісів звітів про збої; дані ми не продаємо. Кожен користувач може видалити свій акаунт прямо в застосунку — див. <a href="delete-account.html">«Видалення акаунта»</a>.</p>
       </div>
 
       <h2>1. Хто ми</h2>
-      <p>
-        Розробник застосунку: <strong>ФОП Тимощук Роман</strong>, Львів, Україна.<br>
-        Контакт: <a href="mailto:rtymoshchuk@gmail.com">rtymoshchuk@gmail.com</a>
-      </p>
+      <p>Розробник HMS і оператор сервера, на якому зберігаються дані: <strong>ФОП Тимощук Роман</strong>, Львів, Україна.</p>
+      <p>Звʼязок: <span class="todo">[ПІДТРИМКА: Telegram-бот]</span></p>
+      <p>Дані працівників вносить до HMS бізнес, у якому вони працюють: власник, адміністратор або менеджер додає людину до команди за номером телефону. Зареєструватися в застосунку самостійно не можна: увійти можна лише з номером, який уже додано до бізнесу в HMS.</p>
 
       <h2>2. Які дані обробляються</h2>
-      <p>HMS — це інструмент для управління HoReCa-бізнесом (кафе, ресторани, точки сервісу). Усі дані вводить власник застосунку самостійно:</p>
+      <h3>Дані акаунта</h3>
       <ul>
-        <li>Імена, прізвища та PIN-коди працівників (PIN зберігається у вигляді криптографічного хешу SHA-256 у Apple Keychain)</li>
-        <li>Контактні дані працівників: номер мобільного телефону, Telegram-нікнейм — для швидкого зв'язку власника зі своїми працівниками</li>
-        <li>Інформація про точки (назви, адреси)</li>
-        <li>Дані продажів, складу, технологічних карт</li>
-        <li>Графіки змін, нарахування зарплат</li>
-      </ul>
-      <p>Застосунок <strong>не збирає</strong>: геолокацію, контакти телефонної книги iOS, фото, дані пристрою, ідентифікатори реклами, поведінкову аналітику.</p>
-      <p>Контактні дані працівників (телефон, Telegram) використовуються виключно для здійснення дзвінка/відкриття чату через стандартні iOS-механізми (URL <code>tel:</code> і <code>https://t.me/</code>) і <strong>не передаються</strong> на жоден сервер.</p>
-
-      <h2>3. Де зберігаються дані</h2>
-      <p>Усі дані зберігаються <strong>виключно локально</strong> на вашому пристрої iOS, у базі SwiftData. Файли захищені стандартним шифруванням файлової системи iOS (Data Protection). PIN-коди та токени — в iOS Keychain.</p>
-      <p>За замовчуванням HMS <strong>не має</strong> хмарного бекенду, не використовує iCloud, не синхронізує дані між пристроями.</p>
-
-      <h2>4. Передача третім особам</h2>
-      <p>Ми <strong>не продаємо</strong> ваші дані і <strong>не передаємо</strong> їх рекламним мережам чи брокерам даних. Єдиний сторонній сервіс — <strong>Sentry</strong> (sentry.io, сервери в ЄС) для діагностики збоїв: у разі падіння або проблеми продуктивності застосунок надсилає технічні дані (стек виклику, модель пристрою, версію ОС), щоб ми тримали застосунок стабільним. Ці дані використовуються виключно для стабільності, <strong>не</strong> для реклами чи відстеження, і <strong>не повʼязуються</strong> з вашою особою для трекінгу.</p>
-
-      <h2>5. Дозволи системи iOS</h2>
-      <ul>
-        <li><strong>Сповіщення</strong> — для нагадування коли робочий таймер завершиться (7, 10 або 15 хвилин). Можна вимкнути в Налаштуваннях iOS.</li>
-        <li><strong>Face ID / Touch ID</strong> — для швидкого входу адміністратора замість введення PIN. Застосунок <strong>НЕ збирає, не зберігає й не передає жодних даних обличчя (face data)</strong>. Біометричну перевірку повністю виконує iOS у Secure Enclave через стандартний фреймворк LocalAuthentication; застосунок отримує лише результат «успіх / невдача» і ніколи не має доступу до біометричних даних. Жодні дані обличчя не передаються третім особам і ніде не зберігаються.</li>
+        <li>Імʼя та прізвище.</li>
+        <li>Номер мобільного телефону — він же ваш логін.</li>
+        <li>Telegram-нікнейм, якщо його вказано.</li>
+        <li>PIN-код — сервер зберігає лише його криптографічний хеш (bcrypt), а не сам PIN, і ніколи не передає хеш застосунку.</li>
+        <li>Службові дані безпеки: кількість невдалих спроб PIN, час тимчасового блокування, статус акаунта (запрошено, активний, вимкнено, видалено), дати створення і змін.</li>
+        <li>Ваші ролі в бізнесах (власник, адміністратор, менеджер, працівник, спостерігач) і точки, до яких вас призначено.</li>
+        <li>Лише для акаунтів, які входили через «Вхід з Apple» у версії 1.0: email та ідентифікатор Apple, отримані тоді. HMS 2.0 не використовує «Вхід з Apple» і цих даних не запитує.</li>
       </ul>
 
-      <h2>6. Опційний мережевий режим (Phase 6 — pilot)</h2>
-      <p>У HMS є експериментальна функція <strong>«Робота в команді»</strong> (мережевий режим) для пілот-користувачів. За замовчуванням вона <strong>вимкнена</strong> — треба явно увімкнути на стартовому екрані або в Settings.</p>
-      <p>Якщо ви свідомо вмикаєте цей режим:</p>
+      <h3>Робочі дані, повʼязані з людиною</h3>
       <ul>
-        <li>Застосунок підключається до сервера, що його тримає розробник (на момент написання — <code>174.138.39.75</code>, DigitalOcean, FRA1).</li>
-        <li>Для входу використовується <strong>Sign In with Apple</strong>. Apple повертає лише ваш стабільний Apple-ідентифікатор і (опційно — на ваш вибір) email. Пароль Apple ID нам не передається.</li>
-        <li>Бізнес-дані вашого workspace (точки, працівники, продукти, продажі, зміни тощо) синхронізуються з сервером — щоб кілька пристроїв вашої команди бачили однакові дані.</li>
-        <li>Сервер не передає ваші дані третім особам, не використовує їх для реклами, не продає.</li>
-      </ul>
-      <p>Якщо ви <strong>не вмикаєте</strong> мережевий режим — нічого з вищеописаного не відбувається. HMS працює виключно локально, як описано у пунктах 2-5.</p>
-      <p>Щоб <strong>повернутися</strong> в локальний режим: Settings → «Робота в команді» → вимкнути + force-quit застосунку. Локальні дані лишаються незмінними. Дані, що були синхронізовані на сервер, лишаються там до явного запиту на видалення (див. п. 7).</p>
-
-      <h2>7. Ваші права</h2>
-      <p>Оскільки за замовчуванням дані лише на вашому пристрої, ви маєте над ними повний контроль:</p>
-      <ul>
-        <li><strong>Видалити всі локальні дані</strong> — Settings → Безпека → «Видалити мережу» (повертає застосунок до стану свіжої установки).</li>
-        <li><strong>Видалити застосунок</strong> — звичайним способом iOS; усі дані видаляються разом із застосунком, включно з PIN у Keychain.</li>
-        <li><strong>Видалити акаунт і серверні дані</strong> (якщо користувалися мережевим режимом) — прямо в застосунку: Settings → Безпека → «Видалити мережу і почати з нуля». Це <strong>назавжди видаляє</strong> ваш workspace і обліковий запис із сервера. Альтернативно — напишіть на <a href="mailto:rtymoshchuk@gmail.com">rtymoshchuk@gmail.com</a>.</li>
-        <li><strong>Експорт даних</strong> — наразі не реалізовано; на запит можемо допомогти витягнути базу з резервної копії пристрою.</li>
+        <li>Зміни: коли і на якій точці зміну відкрито й закрито, позначки чек-листа зміни.</li>
+        <li>Продажі: хто продав, що, за якою ціною, коли й на якій точці; номер столика і примітка, якщо їх ввели; анулювання і ручні корекції продажів — з причиною і тим, хто їх зробив.</li>
+        <li>Рух складу й інвентаризації — з позначкою, хто їх провів.</li>
+        <li>Виплати зарплати: сума, премії і штрафи з примітками, період, дата виплати. З цих даних, змін і продажів рахуються заробіток і залишок до виплати.</li>
       </ul>
 
-      <h2>8. Діти</h2>
-      <p>HMS — професійний бізнес-інструмент для дорослих власників і працівників HoReCa-закладів. Застосунок не зорієнтований на дітей і не збирає дані про дітей.</p>
+      <h3>Дані бізнесу</h3>
+      <p>Назви й адреси точок, меню і ціни, техкарти, склад, витрати. Це не дані про вас особисто, але вони зберігаються разом із даними команди.</p>
 
-      <h2>9. Юрисдикція</h2>
-      <p>Розробник зареєстрований в Україні. Ми поважаємо принципи GDPR (для користувачів з ЄС) і CCPA (для користувачів з Каліфорнії). Оскільки HMS за замовчуванням не передає дані з пристрою, більшість зобов'язань цих регуляцій застосовуються тривіально — ваші дані вже у вас на iPhone і повністю під вашим контролем.</p>
+      <h3>Технічні журнали сервера</h3>
+      <p>Час запиту, метод і адреса запиту (в адресі немає імен і телефонів — лише внутрішні ідентифікатори і параметри фільтрів), внутрішні ідентифікатори користувача і бізнесу, код відповіді, тривалість обробки. Імена, телефони, PIN, токени входу і заголовки авторизації в журнали не записуються. IP-адресу і номер телефону, з яким намагаються увійти, сервер тримає лише в оперативній памʼяті в межах однохвилинного вікна, щоб обмежувати кількість спроб; у журнали вони не потрапляють.</p>
 
-      <h2>10. Зміни в політиці</h2>
-      <p>У разі суттєвих змін ми оновимо цю сторінку і змінимо дату набрання чинності вгорі. Якщо зміни значущі (наприклад, мережевий режим виходить з пілоту і стає основним), користувачам застосунку буде показано повідомлення через release notes у App Store або всередині застосунку.</p>
+      <h3>Чого HMS не збирає</h3>
+      <p>Геолокацію, контакти телефонної книги, фото, камеру, мікрофон, файли пристрою, рекламні ідентифікатори, поведінкову аналітику.</p>
 
-      <h2>11. Зворотний звʼязок</h2>
-      <p>Питання, скарги, запити на видалення даних: <a href="mailto:rtymoshchuk@gmail.com">rtymoshchuk@gmail.com</a>. Відповідаємо протягом 30 днів згідно з GDPR.</p>
-    </section>
-
-    <!-- ========== ENGLISH ========== -->
-    <section class="lang" id="lang-en">
-      <h1>Privacy Policy</h1>
-      <p class="meta">Effective date: June 16, 2026</p>
-
-      <div class="callout">
-        <p><strong>In short:</strong> HMS stores your business data locally on your iPhone, and in the optional Network Mode syncs it to our server. No ads, no behavioral analytics, no trackers, no data selling. The only third-party service is <strong>Sentry</strong> for crash diagnostics (section 4). Network Mode is described below.</p>
-      </div>
-
-      <h2>1. Who we are</h2>
-      <p>
-        App developer: <strong>FOP Tymoshchuk Roman</strong> (sole proprietor), Lviv, Ukraine.<br>
-        Contact: <a href="mailto:rtymoshchuk@gmail.com">rtymoshchuk@gmail.com</a>
-      </p>
-
-      <h2>2. What data is processed</h2>
-      <p>HMS is a tool for managing a HoReCa business (cafés, restaurants, service venues). All data is entered by the app owner:</p>
+      <h2>3. Для чого ми використовуємо дані</h2>
       <ul>
-        <li>Employee first names, last names, and PIN codes (PINs are stored as SHA-256 cryptographic hashes in Apple Keychain)</li>
-        <li>Employee contact data: mobile phone number, Telegram handle — used by the business owner to quickly reach their staff</li>
-        <li>Business location information (names, addresses)</li>
-        <li>Sales, inventory, and technology card data</li>
-        <li>Shift schedules and salary records</li>
+        <li>Вхід і доступ до функцій відповідно до вашої ролі.</li>
+        <li>Робота команди: список команди з контактами, щоб керівник міг зателефонувати або написати в Telegram (кнопки відкривають стандартний дзвінок і Telegram).</li>
+        <li>Облік змін, продажів, складу та інвентаризацій.</li>
+        <li>Розрахунок заробітку та облік виплат.</li>
+        <li>Звіти і рейтинг працівників: виручка, кількість продажів, середній чек, кількість змін.</li>
+        <li>Безпека: захист від підбору PIN, завершення сеансів після скидання PIN.</li>
+        <li>Відповіді на ваші звернення в підтримку.</li>
       </ul>
-      <p>The app <strong>does not collect</strong>: location, iOS phone book contacts, photos, device identifiers, advertising IDs, or behavioral analytics.</p>
-      <p>Employee contact data (phone, Telegram) is used solely to initiate a call or open a chat via standard iOS URL handlers (<code>tel:</code> and <code>https://t.me/</code>) and is <strong>never sent</strong> to any server.</p>
+      <p>Ми <strong>не використовуємо</strong> дані для реклами, <strong>не продаємо</strong> їх і <strong>не передаємо</strong> рекламним мережам чи брокерам даних.</p>
 
-      <h2>3. Where data is stored</h2>
-      <p>All data is stored <strong>exclusively on your iOS device</strong>, in a local SwiftData database. Files are protected by iOS standard file system encryption (Data Protection). PINs and tokens are stored in the iOS Keychain.</p>
-      <p>By default, HMS <strong>has no</strong> cloud backend, does not use iCloud, and does not sync data between devices.</p>
-
-      <h2>4. Sharing with third parties</h2>
-      <p>We <strong>do not sell</strong> your data and <strong>do not share</strong> it with ad networks or data brokers. The only third-party service we use is <strong>Sentry</strong> (sentry.io, EU servers) for crash diagnostics: in the event of a crash or performance issue, the app sends technical diagnostic data (stack trace, device model, OS version) to help us keep the app stable. This data is used solely for stability, <strong>not</strong> for advertising or tracking, and is <strong>not linked</strong> to your identity for tracking purposes.</p>
-
-      <h2>5. iOS Permissions</h2>
+      <h2>4. Хто бачить ваші дані</h2>
       <ul>
-        <li><strong>Notifications</strong> — to remind you when a service timer expires (7, 10, or 15 minutes). Can be disabled in iOS Settings.</li>
-        <li><strong>Face ID / Touch ID</strong> — for fast admin sign-in instead of entering a PIN. The app <strong>does NOT collect, store, or transmit any face data</strong>. Biometric verification is performed entirely by iOS in the Secure Enclave via the standard LocalAuthentication framework; the app only receives a "success / failure" result and never has access to biometric data. No face data is shared with any third party and none is stored anywhere.</li>
+        <li><strong>Учасники вашого бізнесу в HMS</strong> — список команди (імʼя, прізвище, телефон, Telegram, email, якщо він є в акаунті, роль, точки), а також продажі і зміни бізнесу із зазначенням, хто їх зробив.</li>
+        <li><strong>Виплати і залишок до виплати</strong> працівника бачать власник, адміністратори, менеджери і спостерігачі бізнесу; сам працівник бачить лише свої.</li>
+        <li><strong>Інші бізнеси</strong>, що користуються HMS, даних вашого бізнесу не бачать: кожен запит обмежений бізнесом, у який ви увійшли.</li>
+        <li><strong>Розробник</strong> як оператор сервера має технічний доступ до бази даних і звертається до неї для обслуговування і підтримки — наприклад, щоб на ваш запит скинути PIN.</li>
       </ul>
 
-      <h2>6. Optional Network Mode (Phase 6 — pilot)</h2>
-      <p>HMS has an experimental <strong>"Team Work"</strong> feature (Network Mode) for pilot users. It is <strong>off by default</strong> — you must explicitly enable it on the start screen or in Settings.</p>
-      <p>If you deliberately enable this mode:</p>
-      <ul>
-        <li>The app connects to a server maintained by the developer (at the time of writing — <code>174.138.39.75</code>, DigitalOcean, FRA1).</li>
-        <li>Sign-in uses <strong>Sign In with Apple</strong>. Apple returns only your stable Apple identifier and (optionally — at your choice) your email. Your Apple ID password is never sent to us.</li>
-        <li>Your workspace business data (points, employees, products, sales, shifts, etc.) is synced with the server so that multiple devices in your team see the same data.</li>
-        <li>The server does not share your data with third parties, does not use it for advertising, does not sell it.</li>
-      </ul>
-      <p>If you <strong>don't enable</strong> Network Mode — none of the above happens. HMS works strictly locally as described in sections 2-5.</p>
-      <p>To return to local mode: Settings → "Робота в команді" / "Team Work" → toggle off + force-quit the app. Local data is unchanged. Data already synced to the server remains there until an explicit deletion request (see section 7).</p>
+      <h2>5. Де зберігаються дані</h2>
+      <p>На сервері HMS у DigitalOcean, дата-центр AMS3 (Амстердам, Нідерланди). База даних працює на тому самому сервері і доступна лише зсередини нього — з інтернету до неї не підʼєднатися.</p>
+      <p>HMS 2.0 не має локальної бази даних і офлайн-режиму: застосунок завантажує дані з сервера під час роботи.</p>
 
-      <h2>7. Your rights</h2>
-      <p>Since data is on your device by default, you have full control:</p>
+      <h2>6. Дані на вашому пристрої</h2>
+      <p>Застосунок зберігає на пристрої лише таке — у захищеному сховищі системи (iOS Keychain; на Android — сховище, зашифроване ключем Android Keystore):</p>
       <ul>
-        <li><strong>Delete all local data</strong> — Settings → Security → "Видалити мережу" (resets the app to a fresh-install state).</li>
-        <li><strong>Uninstall the app</strong> — standard iOS removal; all data is deleted with the app, including PINs in Keychain.</li>
-        <li><strong>Delete your account and server-side data</strong> (if you used Network Mode) — directly in the app: Settings → Security → "Delete network and start over". This <strong>permanently deletes</strong> your workspace and account from the server. Alternatively, email <a href="mailto:rtymoshchuk@gmail.com">rtymoshchuk@gmail.com</a>.</li>
-        <li><strong>Export data</strong> — not currently implemented; on request we can help extract the database from your device backup.</li>
+        <li>Токен поточного сеансу — видаляється, коли ви виходите з акаунта.</li>
+        <li>Номер телефону останнього входу — щоб екран входу відкривався з ним. Наступний вхід замінює його, видалення акаунта стирає.</li>
+        <li>Номер і PIN для входу через Face ID — лише якщо ви це ввімкнули (п. 7).</li>
+        <li>Налаштування: тема, мова, ваш вибір щодо Face ID; у працівника — позначки «Виконано» для продажів поточного дня.</li>
       </ul>
 
-      <h2>8. Children</h2>
-      <p>HMS is a professional business tool for adult HoReCa venue owners and staff. It is not directed at children and does not collect data from children.</p>
+      <h2>7. Face ID і біометрія</h2>
+      <p>«Вхід через Face ID» — необовʼязковий швидкий вхід без введення PIN (на Android — біометрія пристрою: відбиток пальця або обличчя).</p>
+      <ul>
+        <li>Вмикається лише за вашою згодою: після правильного PIN застосунок питає «Швидкий вхід через Face ID?». Вимкнути можна будь-коли: «Налаштування» → «Вхід через Face ID».</li>
+        <li>Після згоди ваш номер і PIN зберігаються <strong>лише на цьому пристрої</strong>, у сховищі, яке система відкриває тільки після успішної біометричної перевірки. На сервер надсилається той самий PIN, що й при ручному введенні.</li>
+        <li>Застосунок <strong>не отримує, не зберігає і не передає жодних даних обличчя чи відбитків пальців</strong>. Перевірку повністю виконує система: на iOS — Face ID / Touch ID через Keychain і Secure Enclave, на Android — системне біометричне підтвердження й Android Keystore. Застосунок отримує лише результат: доступ до збереженого PIN або відмову.</li>
+        <li>Вимкнення перемикача видаляє збережений PIN із пристрою. Якщо на пристрої змінити набір облич чи відбитків, система робить збережений PIN недоступним — його треба буде ввести знову.</li>
+      </ul>
 
-      <h2>9. Jurisdiction</h2>
-      <p>The developer is registered in Ukraine. We respect the principles of GDPR (for EU users) and CCPA (for California users). Since HMS does not transmit data from the device by default, most obligations of these regulations apply trivially — your data is already on your iPhone and fully under your control.</p>
+      <h2>8. Сповіщення</h2>
+      <p>Сповіщення нагадують працівнику, що сплив робочий таймер. Їх планує сам пристрій — на сервер нічого не надсилається. Дозвіл застосунок запитує, коли ви вперше запускаєте таймер; вимкнути сповіщення можна в налаштуваннях системи.</p>
 
-      <h2>10. Policy changes</h2>
-      <p>If we make material changes, we will update this page and revise the effective date at the top. If a change is significant (for example, Network Mode leaves pilot and becomes the default), app users will see a notification via release notes in the App Store or inside the app.</p>
+      <h2>9. Сторонні сервіси</h2>
+      <ul>
+        <li><strong>DigitalOcean</strong> — хостинг сервера HMS (Нідерланди).</li>
+        <li><strong>Telegram</strong> — лише коли ви самі натискаєте посилання на Telegram (чат підтримки або нікнейм колеги); далі діють правила Telegram.</li>
+        <li>Біометрію і сповіщення обробляють iOS та Android на вашому пристрої.</li>
+      </ul>
+      <p>У HMS 2.0 <strong>немає</strong> сервісів аналітики, реклами, трекінгу чи звітів про збої.</p>
 
-      <h2>11. Contact</h2>
-      <p>Questions, complaints, data deletion requests: <a href="mailto:rtymoshchuk@gmail.com">rtymoshchuk@gmail.com</a>. We respond within 30 days as required by GDPR.</p>
-    </section>
+      <h2>10. Скільки зберігаються дані</h2>
+      <ul>
+        <li>Дані акаунта і робочі дані — доки існують ваш акаунт і бізнес, або доки ви чи бізнес їх не видалите.</li>
+        <li>Якщо бізнес прибрав вас із команди або вимкнув ваш акаунт, увійти ви вже не зможете, але акаунт не видаляється. Щоб видалити його, напишіть у підтримку.</li>
+        <li>Після «Видалити мій акаунт» особисті дані стираються одразу; робочі записи лишаються в обліку бізнесу без імені й телефону (п. 11).</li>
+        <li>Після видалення бізнесу його власником усі дані бізнесу видаляються з бази одразу.</li>
+        <li>Технічні журнали сервера: <span class="todo">[УТОЧНИТИ: строк зберігання журналів сервера]</span>.</li>
+        <li>Резервні копії: <span class="todo">[УТОЧНИТИ: чи робляться резервні копії бази і скільки вони зберігаються]</span>.</li>
+      </ul>
+
+      <h2>11. Видалення акаунта</h2>
+      <p>Кожен користувач може видалити свій акаунт у застосунку. Покрокова інструкція — на сторінці <a href="delete-account.html">«Видалення акаунта»</a>.</p>
+      <ul>
+        <li><strong>Працівник, адміністратор, менеджер, спостерігач:</strong> «Налаштування» → «Видалити мій акаунт». Імʼя замінюється на «Видалений акаунт»; прізвище, телефон, Telegram, email та ідентифікатор Apple (якщо були) і хеш PIN стираються; членство в усіх бізнесах завершується, сеанс перестає діяти. Продажі, зміни, виплати й інші робочі записи лишаються в обліку бізнесу — без вашого імені й телефону. Примітки, які бізнес вписав вручну, не змінюються.</li>
+        <li><strong>Власник:</strong> «Налаштування» → «Безпека» → «Видалити мережу і почати з нуля». Видаляється весь бізнес: точки, команда, продажі, склад, інвентаризації, виплати, чек-листи, налаштування. Акаунти людей, які не працюють і не працювали в жодному іншому бізнесі в HMS, видаляються повністю; акаунт людини, яка працює чи працювала в іншому бізнесі, залишається там.</li>
+        <li>На пристрої після видалення стираються токен сеансу, запамʼятований номер і PIN для Face ID.</li>
+        <li><strong>Без застосунку:</strong> напишіть у підтримку — <span class="todo">[ПІДТРИМКА: Telegram-бот]</span>.</li>
+      </ul>
+
+      <h2>12. Демо-режим</h2>
+      <p>«Подивитись демо» на екрані входу відкриває вигаданий бізнес із вигаданими працівниками — без номера телефону і PIN. Ви нічого не вводите і не створюєте акаунт; змінювати дані не можна («Демо-режим — лише перегляд»); сеанс триває до 4 годин. Особисті дані в демо-режимі не збираються; сервер записує лише технічний журнал запитів, як і для всіх (п. 2).</p>
+
+      <h2>13. Безпека</h2>
+      <ul>
+        <li>PIN зберігається на сервері лише як хеш bcrypt; сам PIN сервер не зберігає і не віддає.</li>
+        <li>Після 5 невдалих спроб PIN поспіль вхід блокується на 15 хвилин; кількість спроб за хвилину також обмежена.</li>
+        <li>Скидання PIN завершує всі попередні сеанси.</li>
+        <li>Доступ за ролями: кожен запит перевіряє, чи ви досі учасник бізнесу і яка у вас роль. Працівник бачить лише свої виплати; спостерігач і демо-режим — лише перегляд.</li>
+        <li>База даних доступна лише зсередини сервера.</li>
+        <li>PIN, токени входу і заголовки авторизації не записуються в журнали.</li>
+        <li>Шифрування зʼєднання (HTTPS) між застосунком і сервером ще не запроваджено. <span class="todo">[УТОЧНИТИ: оновити цей пункт, коли сервер перейде на HTTPS]</span></li>
+      </ul>
+
+      <h2>14. Ваші права</h2>
+      <ul>
+        <li><strong>Переглянути.</strong> Свій профіль, зміни, заробіток і виплати ви бачите в застосунку. Експорту даних у застосунку немає; копію даних про вас можна запросити в підтримці. <span class="todo">[УТОЧНИТИ: у якому форматі і за який строк надаємо копію даних]</span></li>
+        <li><strong>Виправити.</strong> Імʼя, прізвище і Telegram ви змінюєте самі в профілі; номер телефону змінює власник або адміністратор бізнесу.</li>
+        <li><strong>Видалити.</strong> У застосунку або через підтримку (п. 11).</li>
+        <li><strong>Відкликати згоду на Face ID.</strong> Вимкніть «Вхід через Face ID» у налаштуваннях — збережений PIN буде видалено з пристрою.</li>
+        <li><strong>Сповіщення.</strong> Вимикаються в налаштуваннях системи.</li>
+      </ul>
+      <p>Запити: <span class="todo">[ПІДТРИМКА: Telegram-бот]</span>. Строк відповіді: <span class="todo">[УТОЧНИТИ: строк відповіді на запити]</span>.</p>
+
+      <h2>15. Діти</h2>
+      <p>HMS — робочий інструмент для закладів HoReCa: акаунти створює бізнес для своєї команди. Застосунок не призначений для дітей і не збирає даних про вік. <span class="todo">[УТОЧНИТИ: мінімальний вік користувачів]</span></p>
+
+      <h2>16. Юрисдикція</h2>
+      <p>Розробник зареєстрований в Україні; сервер HMS розташований у Нідерландах (ЄС). <span class="todo">[УТОЧНИТИ: які закони про захист персональних даних зазначити]</span></p>
+
+      <h2>17. Що змінилося порівняно з версією 1.0</h2>
+      <ul>
+        <li>Немає локального режиму і бази на пристрої: дані зберігаються на сервері HMS.</li>
+        <li>Вхід — за номером телефону і PIN; «Вхід з Apple» не використовується.</li>
+        <li>Немає Sentry чи інших сервісів звітів про збої.</li>
+        <li>Зʼявився застосунок для Android.</li>
+        <li>Будь-який користувач, а не лише власник, може видалити свій акаунт у застосунку.</li>
+      </ul>
+
+      <h2>18. Зміни в політиці</h2>
+      <p>У разі суттєвих змін ми оновимо цю сторінку і дату набрання чинності вгорі.</p>
+
+      <h2>19. Звʼязок</h2>
+      <p>Питання, скарги, запити на доступ, виправлення чи видалення даних: <span class="todo">[ПІДТРИМКА: Telegram-бот]</span>.</p>
+    </main>
 
     <footer>
-      © 2026 FOP Tymoshchuk Roman · Lviv, Ukraine · HMS v1.0
+      © 2026 ФОП Тимощук Роман · Львів, Україна · HMS 2.0 · <a href="delete-account.html">Видалення акаунта</a>
     </footer>
   </div>
-
-  <script>
-    const buttons = document.querySelectorAll('.lang-switch button');
-    const langs = document.querySelectorAll('.lang');
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('active'));
-        langs.forEach(l => l.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById('lang-' + btn.dataset.lang).classList.add('active');
-      });
-    });
-
-    // Auto-select EN if browser is English
-    if (navigator.language && navigator.language.startsWith('en')) {
-      document.querySelector('button[data-lang="en"]').click();
-    }
-  </script>
 </body>
 </html>

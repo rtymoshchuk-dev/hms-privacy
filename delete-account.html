@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HMS — Видалення акаунта</title>
+  <meta name="description" content="Як видалити акаунт HMS: у застосунку (iOS і Android) або через підтримку; що видаляється, а що залишається." />
+  <style>
+    :root {
+      --bg: #F5EFE6;
+      --text: #1F1814;
+      --muted: #6B5847;
+      --accent: #A87C4F;
+      --rule: #E5DBC9;
+      --todo: #E0A100;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1F1814;
+        --text: #F5EFE6;
+        --muted: #B8A992;
+        --accent: #C49A6C;
+        --rule: #3A2E26;
+        --todo: #E0A100;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+    .brand {
+      font-family: "Didot", "Bodoni 72", Georgia, serif;
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -1px;
+      line-height: 1;
+      margin: 0 0 8px;
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 48px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .page-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 32px;
+    }
+    .page-nav a {
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+    }
+    .page-nav a[aria-current="page"] {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      letter-spacing: -0.3px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 36px 0 12px;
+      letter-spacing: -0.2px;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 24px 0 8px;
+    }
+    p, li {
+      font-size: 16px;
+      margin: 0 0 14px;
+    }
+    ul, ol {
+      padding-left: 22px;
+      margin: 0 0 14px;
+    }
+    li { margin-bottom: 6px; }
+    strong { color: var(--text); font-weight: 600; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+    }
+    a:hover { border-bottom-color: var(--accent); }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+    .callout {
+      background: color-mix(in srgb, var(--accent) 8%, transparent);
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      margin: 24px 0;
+      border-radius: 4px;
+    }
+    .callout p { margin: 0; }
+    .todo {
+      background: color-mix(in srgb, var(--todo) 22%, transparent);
+      border-radius: 3px;
+      padding: 0 4px;
+      font-weight: 600;
+    }
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">H</div>
+    <div class="tagline">HMS — HoReCa Management System</div>
+
+    <nav class="page-nav" aria-label="Сторінки">
+      <a href="index.html">Політика конфіденційності</a>
+      <a href="delete-account.html" aria-current="page">Видалення акаунта</a>
+    </nav>
+
+    <main>
+      <h1>Видалення акаунта HMS</h1>
+      <p class="meta">HMS 2.0 для iOS і Android · Розробник: ФОП Тимощук Роман</p>
+
+      <div class="callout">
+        <p><strong>Коротко:</strong> видалити акаунт можна прямо в застосунку HMS — будь-якій ролі. Працівник видаляє свій акаунт, власник — увесь бізнес. Якщо застосунку немає або увійти не виходить — напишіть у підтримку (розділ 4).</p>
+      </div>
+
+      <h2>1. Ви працівник, адміністратор, менеджер або спостерігач</h2>
+      <ol>
+        <li>Відкрийте HMS і увійдіть за своїм номером телефону та PIN.</li>
+        <li>Перейдіть на вкладку «Налаштування».</li>
+        <li>Натисніть «Видалити мій акаунт». В адміністратора, менеджера і спостерігача ця кнопка — у блоці «Безпека».</li>
+        <li>Підтвердьте: «Так, видалити».</li>
+      </ol>
+      <p>Застосунок вийде з акаунта і відкриє екран входу. Акаунт видаляється одразу, і вас буде прибрано з усіх бізнесів, де ви працюєте.</p>
+      <p>Якщо ви ще й власник бізнесу, застосунок відповість: «Ви власник бізнесу. Спершу видаліть сам бізнес у налаштуваннях власника.» Тоді дійте за розділом 2.</p>
+
+      <h2>2. Ви власник бізнесу</h2>
+      <p>Власник видаляє весь бізнес. Ваш акаунт видаляється разом із ним, якщо ви зараз не працюєте в іншому бізнесі в HMS.</p>
+      <ol>
+        <li>Увійдіть у HMS. Якщо у вас кілька ролей, оберіть «Власник».</li>
+        <li>Перейдіть на вкладку «Налаштування», блок «Безпека».</li>
+        <li>Натисніть «Видалити мережу і почати з нуля».</li>
+        <li>Підтвердьте: «Так, видалити все».</li>
+      </ol>
+      <p><strong>Цю дію не можна скасувати.</strong> Разом із бізнесом зникають записи всієї команди.</p>
+
+      <h2>3. Що видаляється, а що залишається</h2>
+      <h3>Коли ви видаляєте свій акаунт</h3>
+      <p><strong>Видаляється одразу:</strong></p>
+      <ul>
+        <li>імʼя (замінюється на «Видалений акаунт»), прізвище, номер телефону, Telegram;</li>
+        <li>email та ідентифікатор Apple — якщо вони були у вашому акаунті з версії 1.0;</li>
+        <li>хеш PIN-коду;</li>
+        <li>членство в усіх бізнесах; поточний сеанс перестає діяти;</li>
+        <li>на пристрої — токен сеансу, запамʼятований номер, PIN для входу через Face ID і вибір Face ID для цього номера.</li>
+      </ul>
+      <p><strong>Залишається в обліку бізнесу — без вашого імені й телефону:</strong> продажі, зміни, виплати зарплати, рух складу, інвентаризації та інші робочі записи. Бізнесу вони потрібні, щоб облік сходився. Примітки, які бізнес вписав вручну, не змінюються. Ці записи зберігаються, доки бізнес їх не видалить або власник не видалить сам бізнес.</p>
+      <p>Ваш номер телефону звільняється: бізнес може запросити його знову, але це буде новий акаунт без попередньої історії.</p>
+
+      <h3>Коли власник видаляє бізнес</h3>
+      <p><strong>Видаляється одразу і повністю</strong> все, що належить бізнесу: точки, меню і техкарти, склад та його історія, продажі та їх корекції, зміни і чек-листи, інвентаризації, виплати, витрати, склад команди. Також повністю видаляються акаунти людей, які не працюють і не працювали в жодному іншому бізнесі в HMS.</p>
+      <p><strong>Залишається:</strong> акаунти людей, які працюють чи працювали в іншому бізнесі в HMS, — разом із даними того бізнесу. Ваш власний акаунт залишається, лише якщо ви зараз працюєте в іншому бізнесі в HMS; його можна видалити там окремо (розділ 1).</p>
+
+      <h3>Резервні копії і журнали</h3>
+      <p><span class="todo">[УТОЧНИТИ: чи залишаються дані після видалення в резервних копіях і журналах сервера і скільки часу]</span></p>
+
+      <h2>4. Видалення без застосунку</h2>
+      <p>Напишіть у підтримку, якщо застосунку у вас немає або увійти не виходить — наприклад, бізнес прибрав вас із команди чи вимкнув ваш акаунт. У такому разі увійти в HMS ви вже не зможете, але сам акаунт не видаляється, доки ви не попросите.</p>
+      <p>Підтримка: <span class="todo">[ПІДТРИМКА: Telegram-бот]</span></p>
+      <p>У повідомленні вкажіть:</p>
+      <ul>
+        <li>номер телефону, з яким ви входите в HMS;</li>
+        <li>імʼя і назву бізнесу, у якому ви працюєте чи працювали;</li>
+        <li>що видалити: ваш акаунт або — якщо ви власник — увесь бізнес.</li>
+      </ul>
+      <p>PIN-код надсилати не потрібно.</p>
+      <p>Як ми підтверджуємо, що запит надіслали саме ви: <span class="todo">[УТОЧНИТИ: як підтримка перевіряє власника номера]</span></p>
+      <p>Строк виконання запиту: <span class="todo">[УТОЧНИТИ: строк виконання запиту]</span></p>
+      <p>Видалення через підтримку працює так само, як у застосунку (розділ 3).</p>
+
+      <h2>5. Детальніше</h2>
+      <p>Які дані обробляє HMS і як вони захищені — у <a href="index.html">Політиці конфіденційності</a>.</p>
+    </main>
+
+    <footer>
+      © 2026 ФОП Тимощук Роман · Львів, Україна · HMS 2.0 · <a href="index.html">Політика конфіденційності</a>
+    </footer>
+  </div>
+</body>
+</html>
